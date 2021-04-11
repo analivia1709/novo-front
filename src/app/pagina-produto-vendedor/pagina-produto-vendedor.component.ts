@@ -59,10 +59,11 @@ export class PaginaProdutoVendedorComponent implements OnInit {
   deletarProduto() {
    
 
-    this.produtoService.deletarProduto2(this.idProduto).subscribe(() => {
+    this.produtoService.deletarProduto2(this.produto.idProduto).subscribe(() => {
       
       this.alertas.showAlertSuccess('Produto deletado com sucesso!')
       this.router.navigate(['/meuPerfil/meusProdutos'])
+
     })
   }
 }

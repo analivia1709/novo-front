@@ -5,8 +5,10 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-pagina-produto',
@@ -24,17 +26,27 @@ export class PaginaProdutoComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.cpf
 
-  constructor(private produtoService: ProdutoService, 
-    private categoriaService: CategoriaService, 
+  constructor(private produtoService: ProdutoService,
+    private authService : AuthService,
+    private usuarioService: UsuarioService,
+    private categoriaService: CategoriaService,
     private route: ActivatedRoute,
     private router: Router,
     private alertas: AlertasService) { }
 
+
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     this.findAllCategorias()
     this.idProduto = this.route.snapshot.params['idProduto']
     this.findByIdProduto(this.idProduto)
+    this.findByCpf()
+  }
+
+  findByCpf() {
+    this.usuarioService.getBycpf(this.idUsuario).subscribe((resp: Usuario) => {
+      this.usuario = resp
+    })
   }
 
   findByIdProduto(idProduto: number) {
@@ -44,25 +56,29 @@ export class PaginaProdutoComponent implements OnInit {
   }
 
   findAllCategorias() {
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })
   }
 
   findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
-      this.categoria=resp
+      this.categoria = resp
+    })
+  }
+  comprar() {
+    this.usuarioService.comprar(this.idProduto, environment.cpf).subscribe(() => {
+
+      this.alertas.showAlertSuccess('Parabéns pela compra!')
     })
   }
 
-  deletarProduto() {
-   
-
-    this.produtoService.deletarProduto2(this.idProduto).subscribe(() => {
-      
-      this.alertas.showAlertSuccess('Produto deletado com sucesso!')
-      this.router.navigate(['/meuPerfil/meusProdutos'])
+  favoritar() {
+    this.usuarioService.favoritar(this.idProduto, environment.cpf).subscribe(() => {
+      this.alertas.showAlertSuccess('Um novo queridinho foi adicionado')
     })
   }
+
+
 }
 

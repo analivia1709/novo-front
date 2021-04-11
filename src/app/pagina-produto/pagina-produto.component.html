@@ -64,11 +64,9 @@
           <div class="d-flex justify-content-end">
 
             <div class="col-sm-4 d-flex justify-content-center">
-              <button type="button" class="" data-toggle="modal" data-target="#ExemploModalCentralizado">
-                Favoritar
-              </button>
+              <a class="btn btn-primary" (click)='comprar()' >Favoritar</a>
             </div>
-
+           
             <div class="col-sm-4 d-flex justify-content-center">
               <button type="button" class="" data-toggle="modal" data-target="#ExemploModalCentralizado">
                 Ver loja
@@ -76,7 +74,7 @@
             </div>
 
             <div class="col-sm-4 d-flex justify-content-end ">
-              <button type="button" class="btncomprar" data-toggle="modal" data-target="#ExemploModalCentralizado">
+              <button class="btn"  type="button" (click)='comprar()'  class="btncomprar" >
                 Comprar
               </button>
             </div>

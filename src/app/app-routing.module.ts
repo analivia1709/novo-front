@@ -5,6 +5,7 @@ import { AlterarprodutoComponent } from './alterarproduto/alterarproduto.compone
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { ContatoComponent } from './contato/contato.component';
 import { CorpoHomeComponent } from './corpo-home/corpo-home.component';
 import { CriarprodutoComponent } from './criarproduto/criarproduto.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: 'logado', component: MenuLogadoComponent},
   {path: 'meuPerfil', component:TelaUsuarioComponent},
   {path: 'menuLogado', component:MenuLogadoComponent},
-  {path: 'quemSomos', component: QuemSomosComponent}
+  {path: 'quemSomos', component: QuemSomosComponent},
+  {path: 'contato', component: ContatoComponent}
 ];
 
 @NgModule({
