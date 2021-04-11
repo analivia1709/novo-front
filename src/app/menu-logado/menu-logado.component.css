@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* topo das paginas*/
+
+ul.social-networks li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+    
+
+}
+
+
+ul.social-networks{
+    list-style: none;
+       padding: 0;
+       
+}
+
+.fa{
+    font-size: 15pt;
+    color: black;
+    padding:5px;
+    }
+
+.fa-facebook-square:hover{
+color:#3b5998;
+
+}
+
+.fa-instagram:hover{
+    color:#C13584;
+    }
+
+.fa-twitter-square:hover{
+    color:#143c91;
+    }
+    
+
+ .fa-heart-o:hover{
+    color: darkred;
+ }
+
+.altera-menu {
+    font-style: normal; /*caso queira deixar alterar o estilo da fonte*/
+    font-size: 17px; /*caso queira alterar o tamanho da fonte*/
+    font-family: sans-serif; /*caso queira mudar o tipo de fonte*/
+    
+    
+ }
+
+ .cor{
+    color: #84A59D;
+}
+
+
+
+
+
+
+/* caixa de pesquisa */
+#busca{
+    display: inline;
+    border:0;
+    border-bottom: 2px solid #84A59D;
+    background-color: transparent;
+}
+
+#txtBusca{
+  
+   
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: 0;
+    height: 32px;
+    width: 260px;
+    font-family: 'Roboto', sans-serif;
+   
+}
+.fa-search{
+    color: #84A59D;
+}
+
+/* caixa de pesquisa */
+
+
+/*
+espaçamento do primerio menu
+*/
+
+
+/*
+/espaçamento do primerio menu
+*/
+
+/* /topo das paginas*/
+
+.espaco{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 6px 
+}
+
+.posicao{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2px 
+}
+
+/*
+espaçamento do primerio menu
+
+*/
+.estiloDoPopUp{
+    background-color: #F7EDE2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+.containerPopUp{
+     display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #84A59D;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+.dropdown-menu{
+    background-color: #F28482;
+    border-color:transparent;
+    
+}
+
+.dropdown-item{
+    color: white;
+    font-weight: bold;
+}
+
+.adapt{
+    background-color: transparent;
+    border-color: transparent;
+    color: #84A59D;
+    height: 42px;
+    width: 230px;
+    left: 752px;
+    top: 886px;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+
+

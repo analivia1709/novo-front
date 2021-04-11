@@ -1,0 +1,42 @@
+<!--CardsProdutos-->
+<div class="container-fluid pt-5 pb-5" style="background-color: #F7EDE2">
+    <div class="card pt-4 pb-4 m-4 ">
+
+        <div class="row">
+            <div class=" col-sm-6 pl-5 cor d-flex justify-content-start">
+
+
+                <h1>  {{categoria.departamento}} </h1>
+
+            </div>
+            <div class=" col-sm-6 pr-5 d-flex justify-content-end">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Mude a ordem
+                    </button>
+                    <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">De A a Z!</a>
+                      <a class="dropdown-item" href="#">De Z a A!</a>
+                      <a class="dropdown-item" href="#">Menor preço</a>
+                      <a class="dropdown-item" href="#">Maior preço</a>
+                      <a class="dropdown-item" href="#">Padrãozinho</a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <div class="card mr-4 ml-4 ">
+            <div class=" card-group text-center">
+                <div class="card " *ngFor='let item of categoria.produtosCategoria | orderBy : key : reverse'>
+                    <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nomeProduto}}</h5>
+                        <p class="card-text">{{item.preco}}</p>
+                        <a href="#" class="btn btn-primary" [routerLink]="['verProduto', item.idProduto]">Ver Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/CardProdutos-->

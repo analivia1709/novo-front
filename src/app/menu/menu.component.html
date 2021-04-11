@@ -1,0 +1,188 @@
+<nav class="navbar navbar-expand-lg navbar-light  text-nowrap font-weight-bold  " style="background-color: #F5CAC3">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class=" text-white nav-link" routerLink='comoFunciona'>Como Funciona? <span class="sr-only">(current)</span></a>
+    <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
+        <ul class=" navbar-nav d-flex espaco align-items-center ">
+            <li class="nav-item active">
+            </li>
+
+            <li class="nav-item">
+                <a class=" text-white nav-link" routerLink='sobreNos'>Sobre nós</a>
+            </li>
+
+            <li class="nav-item">
+                <a class=" text-white nav-link" routerLink='nossoTime'>Nosso time</a>
+            </li>
+
+            <li class="nav-item">
+                <a class=" text-white nav-link" routerLink='contato'>Contato</a>
+            </li>
+        </ul>
+
+        <ul class=" navbar-nav ml-auto d-flex align-items-center">
+
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" class="icoFacebook" alt='Icone do Facebook'>
+                    <img class="fa" src="https://i.imgur.com/uHVSXNv.png" width="28px" height="28px">
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" class="icoInstagram" alt='Icone do instagram'>
+                    <img class="fa" src="https://i.imgur.com/52SqSWU.png" width="28px" height="28px">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.twitter.com/" target="_blank" class="icoTwitter" alt='Icone do twitter'>
+                    <img class="fa" src="https://i.imgur.com/ycjJ7yp.png" width="28px" height="28px">
+                </a>
+            </li>
+
+        </ul>
+
+
+
+
+    </div>
+</nav>
+
+<!--logo-->
+
+<div class=" d-flex justify-content-center">
+    <a routerLink='paginaInicial' class="icoInstagram" alt='Logo Natureba'>
+        <img src="https://i.imgur.com/qK0vDVm.jpg" width="250" height="260" alt="Logotipo Natureba">
+    </a>
+</div>
+
+<!--/logo-->
+
+<!-- IconeUser-->
+<div class="d-flex justify-content-end pr-4">
+    <button class="btn btn-floating " data-toggle="modal" data-target="#ExemploModalCentralizado">
+        <img src="https://i.imgur.com/lAnmYcd.png" width="40" height="40" alt="icone do login">
+    </button>
+</div>
+<!-- /IconeUser-->
+
+<!-- menuProdutos-->
+
+<nav class="navbar navbar-expand-lg font-weight-bold navbar-light m-0" style="background-color: white">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class=" collapse navbar-collapse " id="conteudoNavbarSuportado">
+        <ul class="navbar-nav cor altera-menu posicao ">
+
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado">Maquiagem</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado">Para o cabelo</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado">Cheirinho bom</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado">Pele macia</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado">Cuide-se</a>
+            </li>
+
+        </ul>
+
+        <!--/Barra de pesquisa-->
+        <div class="pesquisa d-flex justify-content-end" id="busca">
+            <input type="text" id="text" name="t" value placeholder="O que está procurando?" id="txtBusca"
+                class="clear-default-value search-fiel" >
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+        </div>
+    </div>
+
+</nav>
+
+<!--/menuProdutos-->
+<div class="container-fluid tamanho d-flex justify-content-end">
+
+
+    <!-- continuação para o modal do Botão para acionar o pop up de Login-->
+
+    <div class="modal fade" id="ExemploModalCentralizado">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div>
+                    <div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <!--fechamento X--> <span aria-hidden="true">&times;</span>
+                            <!--/fechamento X-->
+                        </button>
+                    </div>
+
+                    <!--card Pop-Up-->
+
+                    <body class="estiloDoPopUp">
+                        <div class="containerPopUp">
+                            <div class="pt-0">
+                                <h1>Já tem uma conta?</h1>
+
+                                <!--Campo preenchimento usuário já cadastrado-->
+                                <div class="label-float">
+                                    <input [(ngModel)]='usuarioLogin.emailUsuario' type="text" id="email"
+                                        placeholder="">
+                                    <label for="email">E-mail</label>
+                                </div>
+
+                                <div class="label-float">
+                                    <input [(ngModel)]='usuarioLogin.senhaUsuario' type="password" id="senha"
+                                        placeholder="">
+                                    <label for="senha">Senha</label>
+                                </div>
+                                <!--Campo preenchimento usuário já cadastrado-->
+
+                                <!--Botão de Entrar-->
+                                <div class="justify-center">
+
+                                    <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal" >Seja bem-vinde</button>
+
+                                </div>
+                                <!--/Botão de Entrar-->
+                                <div class="justify-center">
+                                    <hr>
+                                </div>
+
+                                <h1>Ainda não tem uma conta?</h1>
+
+                                <!--Botão de Cadastrar-->
+                                <div class="justify-center">
+                                    <button routerLink='/cadastrar' class="bt-entrar close" data-dismiss="modal">Venha para nossa Ecovila</button>
+                                </div>
+                                <!--Botão de Cadastrar-->
+
+                            </div>
+                        </div>
+                    </body>
+
+                </div>
+            </div>
+
+            <!--/card Pop-Up-->
+
+        </div>
+    </div>
+</div>

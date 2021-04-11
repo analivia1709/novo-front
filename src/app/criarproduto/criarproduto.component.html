@@ -1,0 +1,94 @@
+<!-- Card 1-->
+
+<body>
+
+    <div class="row container-fluid pt-4">
+        <div class="col-sm-6  px-0">
+            <div class="card">
+                <div class="card-body container-fluid pt-5 " style="background-color: #FFFFFF">
+                    <h1> Cadastre um novo produto! </h1>
+
+                    <div class='label-float d-flex justify-content-center'>
+                        <input [(ngModel)]='produto.nomeProduto' type="text" id="NomeDoProduto" placeholder="" required>
+                        <label for="NomeDoProduto">Nome do produto*</label>
+
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        <input [(ngModel)]='produto.preco' type="number" id="Preço" placeholder="" required>
+                        <label for="Preço">Preço*</label>
+
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        
+                        <label for="EscolhaUmaCategoria">Escolha uma categoria*</label>
+                        <select class="form" name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
+                            <option *ngFor='let item of listaCategorias' value="{{item.idCategoria}}">
+                                {{item.departamento}}
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        <input [(ngModel)]='produto.videoProduto' type="text" id="LinkDoVideo" placeholder="" required>
+                        <label for="LinkDoVideo">Link do video*</label>
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        <input [(ngModel)]='produto.fotoProduto1' type="text" id="LinkDeFoto" placeholder="" required>
+                        <label for="LinkDeFoto">Link de foto*</label>
+
+
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        <input [(ngModel)]='produto.fotoProduto2' type="text" id="LinkDeFoto2" placeholder="" required>
+                        <label for="LinkDeFoto2">Link de foto2*</label>
+
+
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        <input [(ngModel)]='produto.fotoProduto3' type="text" id="LinkDeFoto3" placeholder="" required>
+                        <label for="LinkDeFoto3">Link de foto3*</label>
+                    </div>
+
+                    <div class="label-float d-flex justify-content-center">
+                        <input [(ngModel)]='produto.fotoProduto4' type="text" id="LinkDeFoto4" placeholder="" required>
+                        <label for="LinkDeFoto4">Link de foto4*</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Card 1-->
+
+        <!-- Card 2-->
+       
+        <div class="col-sm-6 px-0" style='width: 100%; height: 100%;'>
+            <div class="card">
+                <div class="card-body container-fluid pt-5" style="background-color: #FFFFFF">
+                    <h1 class="pb-3" style="padding-top: px;"> Descrição do produto </h1>
+                    <p class="mb-2" style="color: #84A59D; font-size: 16px;">Escreva uma descrição bem legal do seu produto</p>
+                    <textarea  [(ngModel)]='produto.descricao' style="max-width:100%;" maxlength="500" name="text" id="Descriçao" cols="95" rows="10"></textarea>
+                </div>
+                <div class="col mx-auto text-center">
+                    <img src="https://imgur.com/x2TMW7E.png" class="img-fluid" width="278" height="300"
+                        alt="desenho de homem passando cartão na máquina">
+                </div>
+                <div class="label-float d-flex justify-content-end pt-3 px-5">
+                    <button (click)='criarProduto()' type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#ExemploModalCentralizado">
+                        Finalizar cadastro
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+    
+        <!-- /Card 2-->
+        
+    </div>
+</body>

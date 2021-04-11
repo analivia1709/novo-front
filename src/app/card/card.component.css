@@ -1,0 +1,31 @@
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+    }
+
+
+    .cor-1{
+
+
+        background: #F7EDE2
+    
+    }
+    
+    .btn-cor-2{
+      
+        background-color: #F28482;
+        border-color:  #F28482;
+    }
+    
+    .cor-3{
+        color: #84A59D;
+    }
+    
+    .esp-1{
+      font-size: 30px;
+      font-weight: bolder;
+      color: #84A59D;
+     margin-block-end: 10;
+    }
+    

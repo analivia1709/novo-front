@@ -1,0 +1,38 @@
+<!--cardsFavoritos-->
+<div class="container-fluid pt-5 pb-5" style="background-color: #F7EDE2">
+    <div class="card pt-4 pb-4 m-4 ">
+
+
+        <div class="col-sm-3 ml-3 cor">
+            <h1> Meus favoritos</h1>
+        </div>
+
+
+        <div class="card mr-4 ml-4 ">
+            <div class=" card-group text-center" *ngFor='let item of usuario.meusFavoritos | orderBy : key : reverse'>
+                <div class="card ">
+                    <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nomeProduto}}</h5>
+                        <p class="card-text">{{item.preco}}.</p>
+                        <a class="btn btn-primary" [routerLink]="['verProduto', item.idProduto]">Ver Mais</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Título do card</h5>
+                        <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma
+                            introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+                        <a class="btn btn-primary ">Ver mais</a>
+                    </div>
+
+                </div>
+
+                <!--/cardFavoritos-->
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,226 @@
+ul.social-networks li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  
+  ul.social-networks{
+    list-style: none;
+       padding: 0;
+       
+  }
+  
+  .fa{
+    font-size: 15pt;
+    color: black;
+    padding:5px;
+    }
+  
+  .fa-facebook-square:hover{
+  color:#3b5998;
+  
+  }
+  
+  .fa-instagram:hover{
+    color:#C13584;
+    }
+  
+  .fa-twitter-square:hover{
+    color:#143c91;
+    }
+    
+  
+  .fa-heart-o:hover{
+    color: darkred;
+  }
+  
+  .altera-menu {
+    font-style: normal; /*caso queira deixar alterar o estilo da fonte*/
+    font-size: 1.1rem; /*caso queira alterar o tamanho da fonte*/
+    font-family: Roboto, sans-serif; /*caso queira mudar o tipo de fonte*/
+    
+  }
+  
+  .cor{
+    color: #84A59D;
+  }
+  
+  
+  
+  .card-body{
+   background-color: #F6BD60;
+  }
+  
+  /* caixa de pesquisa */
+  #busca{
+    background-color: white;
+    border:initial;
+    width: 300px;
+    float: left;
+    border:0;
+  }
+  
+  #txtBusca{
+    float: left;
+    background-color: white;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 260px;
+    font-family: Roboto, sans-serif;
+  }
+  
+  /* caixa de pesquisa */
+  /*
+  /PAGINA INICIAL
+  */
+  
+  .tamanhoCards{
+    width: 40rem;
+  }
+  
+    /* formulario de cadastro*/
+    
+  /*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
+  
+  .container {
+    display: flex;
+    justify-content: center;    
+    width: 100%;
+    margin-top: 00px;
+  }
+  
+  
+  .movs{
+      
+      top: 0;
+      left: 3200;
+      
+  }
+  
+  * {
+  margin: 0;
+  padding: 10;
+  font-family: 'Roboto', sans-serif;
+  }
+  
+  body {  
+  background: #F7EDE2;
+  background-repeat: no-repeat; /*cor de fundo*/
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 995px;
+  
+  }
+  
+  h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #84A59D;  
+  ;   
+  }
+  .label-float input{ /*Cor da caixa*/
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #84A59D;
+  background-color: transparent;
+  outline: none;
+  min-width: 4w80px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
+  }
+  
+  .label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 0%; /*aproximaçao das letras*/
+  margin-bottom: 5%;
+  }
+  
+  .label-float input:focus{
+  border-bottom: 2px solid #84A59D;
+  }
+  
+  .label-float label{ /*estilo movimentaçao das letras  */
+  color: #84A59D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+  font-size: 16px;
+  margin-top: 0;
+  color: #84A59D
+  }
+  
+  button{
+  background-color: #F28482;
+  border-color: #F28482;
+  color: #FFFFFF;
+  height: 42px;
+  width: 230px;
+  left: 752px;
+  top: 886px;
+  border-radius: 0px;
+        
+  
+  }
+  
+  button:hover{
+  background-color: #F28482;
+  color: #fff;
+  }
+  
+  
+  
+  /* tudo dentro do card*/
+  /* formulario de cadastro*/
+  
+  
+  /* Card tem certeza?*/
+  
+  
+  .justify-center{
+    display: flex;
+    justify-content: center;
+    }
+  
+  
+    .cor-1{
+  
+  
+        background: #F7EDE2
+    
+    }
+    
+    .btn-cor-2{
+      
+        background-color: #F28482;
+        border-color:  #F28482;
+    }
+    
+    .cor-3{
+        color: #84A59D;
+    }
+    
+    .esp-1{
+      font-size: 30px;
+      font-weight: bolder;
+      color: #84A59D;
+      margin-block-end: 10;
+    }
+  
+  
+  
+  
